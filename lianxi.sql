@@ -9,7 +9,7 @@
  Target Server Version : 50716
  File Encoding         : utf-8
 
- Date: 11/12/2016 11:49:51 AM
+ Date: 11/12/2016 11:57:07 AM
 */
 
 SET NAMES utf8;
@@ -21,6 +21,9 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `station`;
 CREATE TABLE `station` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
+  `from_station_name` char(30) NOT NULL,
+  `to_station_name` char(30) NOT NULL,
+  `station_train_code` char(10) NOT NULL,
   `start_station_name` char(20) NOT NULL,
   `end_station_name` char(20) NOT NULL,
   `start_time` char(30) NOT NULL,
@@ -29,9 +32,8 @@ CREATE TABLE `station` (
   `zy_num` char(10) NOT NULL,
   `ze_num` char(10) NOT NULL,
   `lishi` char(30) NOT NULL,
-  `station_train_code` char(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 --  Table structure for `user`
