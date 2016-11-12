@@ -42,8 +42,8 @@ def fetch_data(t, start, end):
             try:
                 cursor = conn.cursor()
                 # 创建sql语句
-                sql = 'insert into polls_station (start_station_name,end_station_name,start_time,arrive_time,tz_num,zy_num,ze_num,lishi,station_train_code) values ("%s","%s","%s","%s","%s","%s","%s","%s","%s")' % (
-                    data['start_station_name'], data['end_station_name'],data['start_time'],data['arrive_time'],data['tz_num'],data['zy_num'],data['ze_num'],data['lishi'],data['station_train_code'])
+                sql = 'insert into polls_station (from_station_name,to_station_name,start_station_name,end_station_name,start_time,arrive_time,tz_num,zy_num,ze_num,lishi,station_train_code) values ("%s","%s","%s","%s","%s","%s","%s","%s","%s","%s","%s")' % (
+                    data['from_station_name'],data['to_station_name'], data['start_station_name'], data['end_station_name'],data['start_time'],data['arrive_time'],data['tz_num'],data['zy_num'],data['ze_num'],data['lishi'],data['station_train_code'])
                 cursor.execute(sql)
                 # commit
                 conn.commit()
